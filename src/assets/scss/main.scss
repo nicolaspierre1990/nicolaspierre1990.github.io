@@ -1,0 +1,55 @@
+@import "bootstrap";
+
+$font-family-name: "Polar";
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + ".eot");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face(
+  $font-family-name,
+  "fonts/Polar",
+  $style: normal,
+  $weight: normal
+);
+
+body {
+  font-family: $font-family-name;
+  position: relative;
+}
+
+.navbar {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: transparent;
+
+    &.navbar-shrink {
+      padding: 0;
+      background: black;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+      a {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+section {
+  padding: 50px;
+}
