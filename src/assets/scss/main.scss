@@ -27,6 +27,10 @@ body {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: 700;
+
+  a {
+    color: #fff !important;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -52,4 +56,58 @@ body {
 
 section {
   padding: 50px;
+}
+
+//
+// Masthead section styling
+//
+
+header.masthead {
+  padding-top: 6rem + 4.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: $white;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
+  background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi");
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi"); /* The least supported option. */
+
+
+  .masthead-subheading {
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 1.5rem;
+      margin-bottom: 25px;
+      font-family: $font-family-name;
+  }
+
+  .masthead-heading {
+      font-size: 3.25rem;
+      font-weight: 700;
+      line-height: 3.25rem;
+      margin-bottom: 2rem;
+      font-family: $font-family-name;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  header.masthead {
+      padding-top: 12.5rem + 4.5rem;
+      padding-bottom: 12.5rem;
+
+      .masthead-subheading {
+          font-size: 2.25rem;
+          font-style: italic;
+          line-height: 2.25rem;
+          margin-bottom: 2rem;
+      }
+
+      .masthead-heading {
+          font-size: 4.5rem;
+          font-weight: 700;
+          line-height: 4.5rem;
+          margin-bottom: 4rem;
+      }
+  }
 }

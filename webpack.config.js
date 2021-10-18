@@ -34,6 +34,18 @@ module.exports = {
                     }
                 }
             },
+            {
+                test: /bootstrap\.js$/,
+                loader: 'babel-loader',
+                query: {
+                    cacheDirectory: true,
+                    presets: ['@babel/preset-env']
+                }
+            },
+            {
+                test: /\.(jpg|png)$/,
+                type: 'asset/resource'
+            },
             // CSS, PostCSS, and Sass
             {
                 test: /\.(scss|css)$/,
